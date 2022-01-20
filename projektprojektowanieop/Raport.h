@@ -3,13 +3,13 @@ using namespace std;
 
 
 class Pracownik_biblioteki;
-class system_;
+class System;
 class Raport;
 
 class Raport
 {
 public: Pracownik_biblioteki* _inicjuje;
-public: system_* _system_;
+public: System* _system_;
 
 public: void utworz_raport();
 };

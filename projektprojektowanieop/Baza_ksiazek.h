@@ -8,17 +8,17 @@ using namespace std;
 class Admin;
 class Pracownik_biblioteki;
 class Ksiazka;
-class system_;
-class Baza_ksi¹¿ek;
+class System;
+class Baza_ksiazek;
 
-class Baza_ksi¹¿ek
+class Baza_ksiazek
 {
 public:
     //int _ksiazka;
     //Admin* _dodaje_usuwa;
     //Ksiazka* ksiazka;
 
-    Baza_ksi¹¿ek() {};
+    Baza_ksiazek() {};
 
     void dodaj_ksiazke();
     void usun_ksiazke();

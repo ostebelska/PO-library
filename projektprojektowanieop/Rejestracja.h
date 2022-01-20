@@ -1,14 +1,14 @@
 #include <exception>
 using namespace std;
 
-class nowy_u¿ytkownik;
-class system_;
-class rejestracja;
+class Nowy_uzytkownik;
+class System;
+class Rejestracja;
 
-class rejestracja
+class Rejestracja
 {
-public: nowy_u¿ytkownik* _unnamed_nowy_u¿ytkownik_;
-public: system_* _unnamed_system__;
+public: Nowy_uzytkownik* _unnamed_nowy_u¿ytkownik_;
+public: System* _unnamed_system__;
 
 public: void sprawdzenie_has³a();
 
@@ -18,7 +18,7 @@ public: void utworzenie_has³a();
 
 public: void uzupe³nienie_danych();
 
-public: rejestracja();
+public: Rejestracja();
 
 public: void nadanie_id();
 };

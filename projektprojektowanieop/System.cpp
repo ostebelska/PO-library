@@ -3,35 +3,35 @@ using namespace std;
 
 #include"System.h"
 
-void system_::sprawdzenie_danych() {
+void System::sprawdzenie_danych() {
 	throw "Not yet implemented";
 }
 
-void system_::nadanie_id() {
+void System::nadanie_id() {
 	throw "Not yet implemented";
 }
 
-void system_::sprawdzenie_kar() {
+void System::sprawdzenie_kar() {
 	throw "Not yet implemented";
 }
 
-void system_::szukaj_uzytkownika() {
+void System::szukaj_uzytkownika() {
 	throw "Not yet implemented";
 }
 
-void system_::utwórz_raport() {
+void System::utwórz_raport() {
 	throw "Not yet implemented";
 }
 
-void system_::wyœwietl_raport() {
+void System::wyœwietl_raport() {
 	throw "Not yet implemented";
 }
 
-void system_::zatwierdŸ_raport() {
+void System::zatwierdŸ_raport() {
 	throw "Not yet implemented";
 }
 
-void system_::czy_moze_zarezerwowac() {
+void System::czy_moze_zarezerwowac() {
 	throw "Not yet implemented";
 }
 

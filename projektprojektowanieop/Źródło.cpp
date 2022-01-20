@@ -9,16 +9,16 @@
 using namespace std;
 
 
-class Ksi¹¿ka;
-class Baza_ksi¹¿ek;
-class logowanie;
+class Ksiazka;
+class Baza_ksiazek;
+class Logowanie;
 class Rezerwacja;
 class Wypo¿yczenie;
-class system_;
-class U¿ytkownik;
-class logowanie;
+class System;
+class Uzytkownik;
+class Logowanie;
 class Admin;
-class rejestracja;
+class Rejestracja;
 
 /*
 bool passwords()
@@ -57,7 +57,7 @@ int main()
 {
 	string adminUser;
 	string adminPassword;
-	Baza_ksi¹¿ek b;
+	Baza_ksiazek b;
 	char x;
 
 
@@ -78,10 +78,10 @@ int main()
 	{
 	case 1:
 		//logowanie
-		logowanie l();
+		Logowanie l();
 
 	case 2:
-		rejestracja r();
+		Rejestracja r();
 	case 3:
 		//menu administratora/ pracownika biblioteki
 

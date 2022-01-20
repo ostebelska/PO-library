@@ -1,23 +1,23 @@
 #include <exception>
 using namespace std;
 
-class U¿ytkownik;
+class Uzytkownik;
 class Pracownik_biblioteki;
-class nowy_u¿ytkownik;
-class Baza_ksi¹¿ek;
-class rejestracja;
-class logowanie;
+class Nowy_uzytkownik;
+class Baza_ksiazek;
+class Rejestracja;
+class Logowanie;
 class Raport;
-class system_;
+class System;
 
-class system_
+class System
 {
-public: U¿ytkownik* _unnamed_U¿ytkownik_;
+public: Uzytkownik* _unnamed_U¿ytkownik_;
 public: Pracownik_biblioteki* _unnamed_Pracownik_biblioteki_;
-public: nowy_u¿ytkownik* _unnamed_nowy_u¿ytkownik_;
-public: Baza_ksi¹¿ek* _unnamed_Baza_ksi¹¿ek_;
-public: rejestracja* _unnamed_rejestracja_;
-public: logowanie* _unnamed_logowanie_;
+public: Nowy_uzytkownik* _unnamed_nowy_u¿ytkownik_;
+public: Baza_ksiazek* _unnamed_Baza_ksi¹¿ek_;
+public: Rejestracja* _unnamed_rejestracja_;
+public: Logowanie* _unnamed_logowanie_;
 public: Raport* _u¿ywa;
 
 public: void sprawdzenie_danych();

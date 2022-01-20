@@ -5,13 +5,13 @@ using namespace std;
 
 
 class Rezerwacja;
-class Baza_ksi¹¿ek;
+class Baza_ksiazek;
 class Zwrot;
-class U¿ytkownik;
+class Uzytkownik;
 class Wypo¿yczenie;
 class Bibliotekarz;
 class Admin;
-class Ksi¹¿ka;
+class Ksiazka;
 
 int res_book(int, int); //sprawdzenie czy ksiazka jest w systemie
 

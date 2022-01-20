@@ -12,13 +12,13 @@ using namespace std;
 	//opcja zalogowania do systemu
 }*/
 
-void U¿ytkownik::wyszukaj()
+void Uzytkownik::wyszukaj()
 {
 	cout << "lol";
 	//opcja wyszukania ksiazki
 }
 
-void U¿ytkownik::rezerwacja()
+void Uzytkownik::rezerwacja()
 {
 	cout << "lol";//opcja rezerwacji ksiazki
 }

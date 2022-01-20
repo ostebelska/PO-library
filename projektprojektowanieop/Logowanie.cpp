@@ -5,7 +5,7 @@ using namespace std;
 
 #include "Logowanie.h"
 
-void logowanie::wprowadzenie_danych()
+void Logowanie::wprowadzenie_danych()
 {
 	cout << "Wprowadz nr karty:";
 	//cin >> Uzytkownik.id_karty;

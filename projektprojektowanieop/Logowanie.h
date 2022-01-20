@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std;
 
-class U¿ytkownik;
-class system_;
-class logowanie;
+class Uzytkownik;
+class System;
+class Logowanie;
 
-class logowanie
+class Logowanie
 {
 public:
-	U¿ytkownik* Uzytkownik;
+	Uzytkownik* Uzytkownik;
 	//system_* _unnamed_system__;
 
 	void wprowadzenie_danych();

@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-class Ksi¹¿ka;
+class Ksiazka;
 class Rezerwacja;
 class Wypo¿yczenie;
 class Zwrot;
@@ -11,7 +11,7 @@ class Bibliotekarz;
 
 class Bibliotekarz
 {
-public: std::vector<Ksi¹¿ka*> _wydaje_przyjmuje;
+public: std::vector<Ksiazka*> _wydaje_przyjmuje;
 public: Rezerwacja* _unnamed_Rezerwacja_;
 public: Wypo¿yczenie* _unnamed_Wypo¿yczenie_;
 public: Zwrot* _unnamed_Zwrot_;

@@ -3,25 +3,25 @@ using namespace std;
 
 #include "Rejestracja.h"
 
-void rejestracja::sprawdzenie_has³a() {
+void Rejestracja::sprawdzenie_has³a() {
 	throw "Not yet implemented";
 }
 
-void rejestracja::utworzenie_karty() {
+void Rejestracja::utworzenie_karty() {
 	throw "Not yet implemented";
 }
 
-void rejestracja::utworzenie_has³a() {
+void Rejestracja::utworzenie_has³a() {
 	throw "Not yet implemented";
 }
 
-void rejestracja::uzupe³nienie_danych() {
+void Rejestracja::uzupe³nienie_danych() {
 	throw "Not yet implemented";
 }
 
-rejestracja::rejestracja() {
+Rejestracja::Rejestracja() {
 }
 
-void rejestracja::nadanie_id() {
+void Rejestracja::nadanie_id() {
 	throw "Not yet implemented";
 }

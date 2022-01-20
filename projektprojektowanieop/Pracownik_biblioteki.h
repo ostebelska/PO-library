@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-class Baza_ksi¹¿ek;
-class system_;
+class Baza_ksiazek;
+class System;
 class Raport;
 
 class Pracownik_biblioteki

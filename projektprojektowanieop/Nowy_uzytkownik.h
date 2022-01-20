@@ -3,20 +3,20 @@
 using namespace std;
 
 
-class Baza_ksi¹¿ek;
-class rejestracja;
-class system_;
-class nowy_u¿ytkownik;
+class Baza_ksiazek;
+class Rejestracja;
+class System;
+class Nowy_uzytkownik;
 
-class nowy_u¿ytkownik
+class Nowy_uzytkownik
 {
 private: string _imie;
 private: string _nazwisko;
 private: string _mail;
 private: string _data_uro;
-public: Baza_ksi¹¿ek* _u¿ywa;
-public: rejestracja* _unnamed_rejestracja_;
-public: system_* _unnamed_system__;
+public: Baza_ksiazek* _u¿ywa;
+public: Rejestracja* _unnamed_rejestracja_;
+public: System* _unnamed_system__;
 
 public: void wyszukaj_ksi¹¿kê();
 
