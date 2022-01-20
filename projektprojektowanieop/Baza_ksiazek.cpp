@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Baza_ksiazek.h"
 
-void Baza_ksi¹¿ek::dodaj_ksiazke()
+void Baza_ksiazek::dodaj_ksiazke()
 {
     system("cls");
     fstream file;
@@ -34,7 +34,7 @@ void Baza_ksi¹¿ek::dodaj_ksiazke()
     Ksiazka* ksiazka(int b_id, string b_name, string a_name, int no_copy);
 }
 
-void Baza_ksi¹¿ek::usun_ksiazke()
+void Baza_ksiazek::usun_ksiazke()
 {
     system("cls");
     fstream file, file1;
@@ -89,7 +89,7 @@ void Baza_ksi¹¿ek::usun_ksiazke()
     rename("txt1.txt", "txt2.txt");
 }
 
-void Baza_ksi¹¿ek::szukaj()
+void Baza_ksiazek::szukaj()
 {
     system("cls");
     fstream file;
@@ -122,7 +122,7 @@ void Baza_ksi¹¿ek::szukaj()
     }
 }
 
-void Baza_ksi¹¿ek::wyswietl_szukane()
+void Baza_ksiazek::wyswietl_szukane()
 {
     system("cls");
     fstream file;
