@@ -4,23 +4,23 @@
 #include<iostream>
 using namespace std;
 
-class Ksiπøka;
-class Baza_ksiπøek;
+class Ksia≈ºka;
+class Baza_ksi≈°≈ºek;
 class logowanie;
 class Rezerwacja;
-class Wypoøyczenie;
+class Wypo≈ºyczenie;
 class system_;
-class Uøytkownik;
+class U≈ºytkownik;
 
-class Uøytkownik
+class U≈ºytkownik
 {
 	//private: int _id_karty;
 public: string _haslo;			//haslo do logowania
-//public: Ksiπøka* _rezerwuje_wypoøycza_zwraca;
-//public: Baza_ksiπøek* _uøywa;
+//public: Ksi≈°≈ºka* _rezerwuje_wypo≈ºycza_zwraca;
+//public: Baza_ksi≈°≈ºek* _u≈ºywa;
 public: logowanie* _unnamed_logowanie_;
 public: std::vector<Rezerwacja*> _unnamed_Rezerwacja_;
-	  //public: std::vector<Wypoøyczenie*> _unnamed_Wypoøyczenie_;
+	  //public: std::vector<Wypo≈ºyczenie*> _unnamed_Wypo≈ºyczenie_;
 	  //public: system_* _unnamed_system__;
 
 
