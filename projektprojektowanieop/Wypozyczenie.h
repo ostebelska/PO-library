@@ -6,18 +6,20 @@ class Uzytkownik;
 class Bibliotekarz;
 class Ksiazka;
 class Rezerwacja;
-class Wypo¿yczenie;
+class Wypozyczenie;
 
-class Wypo¿yczenie
+class WypoÂ¿yczenie
 {
 private: int _numer_wypozyczenia;
 private: int _id_karty;
-public: Uzytkownik* _unnamed_U¿ytkownik_;
+public: Uzytkownik* _unnamed_Uzytkownik_;
+public: Uzytkownik* _unnamed_UÅ¼ytkownik_;
 public: Bibliotekarz* _unnamed_Bibliotekarz_;
-public: Ksiazka* _unnamed_Ksi¹¿ka_;
+public: Ksiazka* _unnamed_Ksiazka_;
+public: Ksiazka* _unnamed_KsiÄ…Å¼ka_;
 public: Rezerwacja* _unnamed_Rezerwacja_;
 
 public: void zeskanuj_ksiazke();
 
-public: void szukaj_ksi¹¿ki();
+public: void szukaj_ksiazki();
 };

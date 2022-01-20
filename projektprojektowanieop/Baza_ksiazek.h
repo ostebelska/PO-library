@@ -8,6 +8,8 @@ using namespace std;
 class Admin;
 class Pracownik_biblioteki;
 class Ksiazka;
+class system_;
+class Baza_ksiazek;
 class System;
 class Baza_ksiazek;
 

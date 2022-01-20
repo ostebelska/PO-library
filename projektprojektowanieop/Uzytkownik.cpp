@@ -6,7 +6,7 @@ using namespace std;
 
 #include "Uzytkownik.h"
 
-/*bool U¿ytkownik::logowanie()
+/*bool Uzytkownik::logowanie()
 {
 	cout
 	//opcja zalogowania do systemu
