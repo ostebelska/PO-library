@@ -19,5 +19,5 @@ public: Rezerwacja* _unnamed_Rezerwacja_;
 
 public: void zeskanuj_ksiazke();
 
-public: void szukaj_ksi¹¿ki();
+public: void szukaj_ksiazki();
 };
