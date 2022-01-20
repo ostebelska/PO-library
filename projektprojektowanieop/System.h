@@ -8,7 +8,6 @@ class Baza_ksiazek;
 class Rejestracja;
 class Logowanie;
 class Raport;
-class System;
 
 class System
 {

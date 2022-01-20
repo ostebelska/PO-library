@@ -9,7 +9,6 @@ using namespace std;
 class Ksiazka;
 class Baza_ksiazek;
 class Pracownik_biblioteki;
-class Admin;
 
 class Admin
 {

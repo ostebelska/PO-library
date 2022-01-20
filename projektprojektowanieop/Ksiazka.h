@@ -11,7 +11,6 @@ class Uzytkownik;
 class Wypo¿yczenie;
 class Bibliotekarz;
 class Admin;
-class Ksiazka;
 
 int res_book(int, int); //sprawdzenie czy ksiazka jest w systemie
 

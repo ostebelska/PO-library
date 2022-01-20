@@ -3,11 +3,11 @@ using namespace std;
 
 #include "Wypozyczenie.h"
 
-void Wypo¿yczenie::zeskanuj_ksiazke() {
+void Wypozyczenie::zeskanuj_ksiazke() {
 	throw "Not yet implemented";
 }
 
-void Wypo¿yczenie::szukaj_ksi¹¿ki() {
+void Wypozyczenie::szukaj_ksiazki() {
 	throw "Not yet implemented";
 }
 
