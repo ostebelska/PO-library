@@ -2,22 +2,22 @@
 using namespace std;
 
 
-class U¿ytkownik;
+class Uzytkownik;
 class Bibliotekarz;
-class Ksi¹¿ka;
+class Ksiazka;
 class Rezerwacja;
-class Wypo¿yczenie;
+class Wypozyczenie;
 
-class Wypo¿yczenie
+class WypoÂ¿yczenie
 {
 private: int _numer_wypozyczenia;
 private: int _id_karty;
-public: U¿ytkownik* _unnamed_U¿ytkownik_;
+public: Uzytkownik* _unnamed_Uzytkownik_;
 public: Bibliotekarz* _unnamed_Bibliotekarz_;
-public: Ksi¹¿ka* _unnamed_Ksi¹¿ka_;
+public: Ksiazka* _unnamed_Ksiazka_;
 public: Rezerwacja* _unnamed_Rezerwacja_;
 
 public: void zeskanuj_ksiazke();
 
-public: void szukaj_ksi¹¿ki();
+public: void szukaj_ksiÂ¹Â¿ki();
 };
