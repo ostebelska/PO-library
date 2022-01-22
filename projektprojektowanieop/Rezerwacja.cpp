@@ -12,7 +12,3 @@ void Rezerwacja::zarezerwuj()
 {
 	throw "Not yet implemented";
 }
-
-void Rezerwacja::operation() {
-	throw "Not yet implemented";
-}

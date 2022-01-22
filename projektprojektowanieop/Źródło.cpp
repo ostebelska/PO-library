@@ -92,8 +92,7 @@ void panel_sterowania()
 		cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
 		cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
 	
-		getchar();
-		getchar();
+		getchar(); getchar();
 		system("cls");
 
 		panel_sterowania();

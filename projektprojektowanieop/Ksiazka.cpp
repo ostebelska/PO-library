@@ -37,9 +37,4 @@ void Ksiazka::zobacz_opis()
 	cout << "\n\t\tNazwa wydawnictwa: " << wydawnictwo << endl;
 }
 
-//DO BIBLIOTEKARZA NALEZA TE METODY
-void Ksiazka::zwroc()
-{
-	throw "Not yet implemented";
-}
 
