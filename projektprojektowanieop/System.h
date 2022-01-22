@@ -23,11 +23,11 @@ public: void sprawdzenie_kar();
 
 public: void szukaj_uzytkownika();
 
-public: void utwórz_raport();
+public: void utworz_raport();
 
-public: void wyœwietl_raport();
+public: void wyswietl_raport();
 
-public: void zatwierdŸ_raport();
+public: void zatwierdz_raport();
 
 public: void czy_moze_zarezerwowac();
 };
