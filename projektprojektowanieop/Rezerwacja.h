@@ -16,6 +16,6 @@ class Rezerwacja
 public: 
 	Ksiazka ksiazka;
 	void sprawdz_rezerwacje();
-	void zarezerwuj(Ksiazka k);
+	void zarezerwuj();
 };
 #endif

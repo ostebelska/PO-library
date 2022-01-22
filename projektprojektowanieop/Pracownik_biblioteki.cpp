@@ -13,11 +13,24 @@ using namespace std;
 
 void Pracownik_biblioteki::logowanie()
 {
-	throw "Not yet implemented";
-}
+	string adminUser;
+	string adminPassword;
 
-void Pracownik_biblioteki::raport() {
-	throw "Not yet implemented";
+	cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
+	cout << "\n\n Wpisz login: ";
+	cin >> adminUser;
+	cout << "\n Wpisz haslo:";
+	cin >> adminPassword;
+
+	if (adminUser == "root" && adminPassword == "root")
+	{
+		menu_pracownika();			//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
+	}
+	else
+	{
+		cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
+		getchar(); getchar();
+	}
 }
 
 void Pracownik_biblioteki::menu_pracownika()

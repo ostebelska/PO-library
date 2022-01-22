@@ -29,7 +29,7 @@ public:
 	void utworzenie_konta(int, string);
 	void utworzenie_has³a();
 	void uzupe³nienie_danych();
-	void nadanie_id();
+	void nadanie_id(string);
 };
 
 #endif

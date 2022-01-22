@@ -27,14 +27,14 @@ void Rejestracja::utworzenie_konta(int karta, string haslo)
 	cout << "\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl << endl;
 	cout << "\t\t\t\tSPROBUJ SIE ZALOGOWAC." << endl << endl;
 
+	system("pause");
+
 	logowanie.wprowadzenie_danych(id_karty, _haslo);
-
-
+	
 }
 
 void Rejestracja::utworzenie_has³a()
 {
-	int dl_hasla;
 	cout << "Wpisz haslo, ktore zawiera do 8 znakow:";
 	cin >> nowy_uzytkownik.haslo;
 
@@ -47,7 +47,7 @@ void Rejestracja::utworzenie_has³a()
 	}
 	else
 	{
-		nadanie_id();
+		nadanie_id(_haslo);
 	}
 
 }
@@ -69,7 +69,7 @@ void Rejestracja::uzupe³nienie_danych()
 
 }
 
-void Rejestracja::nadanie_id()
+void Rejestracja::nadanie_id(string haslo_)
 {
 	srand(time(NULL));
 	int liczba = (rand() % 1200) + 128;
@@ -78,8 +78,8 @@ void Rejestracja::nadanie_id()
 
 	nowy_uzytkownik.id_karty = liczba;
 
-	nowy_uzytkownik.haslo == haslo_nowe;
-	nowy_uzytkownik.id_karty = kod;
+	string haslo_nowe = haslo_;
+	int kod = liczba;
 
 	utworzenie_konta(kod, haslo_nowe);
 	

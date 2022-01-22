@@ -2,7 +2,8 @@
 #include <fstream>
 #include <stdio.h>
 #include <stdlib.h>
-
+#ifndef BAZA_KSIAZEK_H
+#define BAZA_KSIAZEK_H
 using namespace std;
 
 class Admin;
@@ -24,3 +25,4 @@ public:
     void szukaj();
     void wyswietl_szukane();
 };
+#endif

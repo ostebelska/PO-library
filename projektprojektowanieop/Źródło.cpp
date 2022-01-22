@@ -33,8 +33,7 @@ class Rejestracja;
 
 void panel_sterowania()
 {
-	string adminUser;
-	string adminPassword;
+
 	Baza_ksiazek b;
 	Rejestracja r;
 	Logowanie l;
@@ -73,76 +72,24 @@ void panel_sterowania()
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
 		l.wprowadzenie_danych(k, h); //ustalone wartosci dla hasla i id karty
-
-		int ch = 0;
-		while (ch != 9)
-		{
-			system("cls");
-			cout << "\n\nPomyslnie zalogowano." << endl;
-			cout << "\n1. Szukaj ksiazki";
-			cout << "\n2. Zarezerwuj ksiazke";
-			cout << "\n9. Wyjdz";
-			cout << "\n\n Wpisz swoj wybor : ";
-
-			cin >> ch;
-			switch (ch)
-			{
-			case 1:
-				b.wyswietl_szukane();
-				break;
-			case 2:
-			{
-				cout << "Aby wpisaæ tytul ksiazki, ktora chcesz zarezerwowac wcisnij dowolny przycisk:" << endl;
-				getchar(), getchar();
-
-				b.wyswietl_szukane();
-				cout << "Czy napewno chcesz zarezerwowac dana ksiazke?(y/n)" << endl;
-				cin >> y;
-				if (y == 'y')
-				{
-					rez.zarezerwuj(ks2); //rezerwacja ksiazki
-				}
-				break;
-			}
-			case 9:
-				exit(0);
-			default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-				getchar();
-				break;
-			}
-			system("cls");
-		}
+		l.logowanie();
 	}
 	case 2:
 	{
 		system("cls");
 		cout << "\n\t\t\t\tREJESTRACJA" << endl;
 		r.uzupe³nienie_danych();
+
 		cout << endl << endl;
 
-		getchar(); getchar();
+		getchar(), getchar();
 		system("cls");
 	}
 		break;
 
 	case 3:
 	{
-		cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
-		cout << "\n\n Wpisz login: ";
-		cin >> adminUser;
-		cout << "\n Wpisz haslo:";
-		cin >> adminPassword;
-
-		if (adminUser == "root" && adminPassword == "root")
-		{
-			pracownik.menu_pracownika();			//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
-		}
-		else
-		{
-			cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-			getchar(); getchar();
-		}
-
+		pracownik.logowanie();
 		break;
 	}
 	case 4:
