@@ -14,11 +14,6 @@ using namespace std;
 
 void Pracownik_biblioteki::logowanie()
 {
-	throw "Not yet implemented";
-}
-
-void Pracownik_biblioteki::raport() {
-	
 	string adminUser;
 	string adminPassword;
 
@@ -37,6 +32,11 @@ void Pracownik_biblioteki::raport() {
 		cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 		getchar(); getchar();
 	}
+}
+
+void Pracownik_biblioteki::raport()
+{
+	cout << "raport";
 }
 
 void Pracownik_biblioteki::menu_pracownika()

@@ -18,5 +18,6 @@ public:
 	
 	void logowanie();
 	void menu_pracownika();
+	void raport();
 
 };

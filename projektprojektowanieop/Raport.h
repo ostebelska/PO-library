@@ -10,8 +10,6 @@ class Raport;
 
 class Raport
 {
-public: Pracownik_biblioteki* _inicjuje;
-public: System* _system_;
 
 public: void utworz_raport();
 };
