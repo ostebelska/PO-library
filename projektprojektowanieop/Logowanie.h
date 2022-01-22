@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include"Uzytkownik.h"
+#include"Rejestracja.h"
+
 #ifndef LOGOWANIE_H
 #define LOGOWANIE_H
 using namespace std;
@@ -13,9 +15,9 @@ class Logowanie;
 class Logowanie
 {
 public:
-	Uzytkownik Uzytkownik;
+	Uzytkownik uzytkownik;
 
-	void wprowadzenie_danych();
+	void wprowadzenie_danych(int, string);
 
 };
 

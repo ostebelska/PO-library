@@ -1,6 +1,10 @@
 #include <exception>
 #include <string>
 #include"Uzytkownik.h"
+
+#ifndef NOWY_UZYTKOWNIK_H
+#define NOWY_UZYTKOWNIK_H
+
 using namespace std;
 
 
@@ -8,11 +12,12 @@ class Baza_ksiazek;
 class Rejestracja;
 class System;
 class Uzytkownik;
+class Nowy_uzytkownik;
 
 class Nowy_uzytkownik
 {
-public:
 
+public:
 		string imie;
 		string nazwisko;
 		string mail;
@@ -26,3 +31,5 @@ public:
 	    void powrót_do_menu();
 	    void nadanie_id();
 };
+
+#endif

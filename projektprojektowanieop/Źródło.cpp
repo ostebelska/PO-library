@@ -31,6 +31,8 @@ void panel_sterowania()
 	Rejestracja r;
 	Logowanie l;
 	Rezerwacja rez;
+	int q = 1234;
+	string w = "root";
 
 	char x;
 	int ch;
@@ -55,7 +57,7 @@ void panel_sterowania()
 	{
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
-		l.wprowadzenie_danych();
+		l.wprowadzenie_danych(q,w);
 
 		int ch = 0;
 		while (ch != 9)
@@ -89,13 +91,9 @@ void panel_sterowania()
 		cout << "\n\t\t\t\tREJESTRACJA" << endl;
 		r.uzupe³nienie_danych();
 		cout << endl << endl;
-		cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
-		cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
 	
 		getchar(); getchar();
 		system("cls");
-
-		panel_sterowania();
 
 		break;
 	}

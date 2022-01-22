@@ -7,21 +7,28 @@ using namespace std;
 
 #include "Logowanie.h"
 
-void Logowanie::wprowadzenie_danych()
+
+void Logowanie::wprowadzenie_danych(int kod, string haslo)
 {
+	
+	int nr;
+	string pass;
+
+	uzytkownik.haslo = haslo;
+	uzytkownik.id_karty = kod;
+
 	cout << "Wprowadz nr karty:";
-	cin >> Uzytkownik.id_karty;
+	cin >> nr;
 	cout << endl;
 	cout << "Wprowadz haslo:";
-	cin >> Uzytkownik.haslo;
+	cin >> pass;
 
-	if (Uzytkownik.haslo != "root")
+	if (pass != uzytkownik.haslo || nr != uzytkownik.id_karty)
 	{
-		cout << "LOGOWANIE NIE POWIODLO SIE. ZLE HASLO.";
+		cout << "LOGOWANIE NIE POWIODLO SIE. ZLE DANE.";
 	}
-	if (Uzytkownik.id_karty != 1234)
-	{
-		cout << "LOGOWANIE NIE POWIODLO SIE. ZLY NUMER KARTY.";
-	}
+	else
+		cout << "LOGOWANIE POWIODLO SIE.";
+	
 }
 

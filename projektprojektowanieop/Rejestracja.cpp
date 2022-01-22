@@ -10,23 +10,26 @@ using namespace std;
 #include "System.h"
 #include "Rejestracja.h"
 #include "Uzytkownik.h"
+#include"Logowanie.h"
 
 void Rejestracja::sprawdzenie_has³a()
 {
 	throw "Not yet implemented";
 }
 
-void Rejestracja::utworzenie_konta()
+void Rejestracja::utworzenie_konta(int karta, string haslo)
 {
-	nowy_uzytkownik.haslo == uzytkownik.haslo;
-	nowy_uzytkownik.id_karty = uzytkownik.id_karty;
-	fstream file;
-	file.open("uzytkownicy.txt", ios::out | ios::app);
-	file << " " << nowy_uzytkownik.nazwisko<< " " << uzytkownik.id_karty << " " << nowy_uzytkownik.mail<<endl;
-	file.close();
-	
+
+	int id_karty = karta;
+	string _haslo= haslo;
+
 	cout << endl << endl;
-	cout << "Utworzono konto!";
+	cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
+	cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
+
+	logowanie.wprowadzenie_danych(id_karty, _haslo);
+
+
 }
 
 void Rejestracja::utworzenie_has³a()
@@ -75,6 +78,9 @@ void Rejestracja::nadanie_id()
 
 	nowy_uzytkownik.id_karty = liczba;
 
-	utworzenie_konta();
+	nowy_uzytkownik.haslo == haslo_nowe;
+	nowy_uzytkownik.id_karty = kod;
+
+	utworzenie_konta(kod, haslo_nowe);
 	
 }
