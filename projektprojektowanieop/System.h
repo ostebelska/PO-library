@@ -19,7 +19,7 @@ public: void sprawdzenie_danych();
 
 public: void nadanie_id();
 
-public: void sprawdzenie_kar();
+public: bool sprawdzenie_kar();
 
 public: void szukaj_uzytkownika();
 

@@ -23,18 +23,4 @@ void Ksiazka::zmien_status()
 }
 
 
-void Ksiazka::zarezerwuj()
-{
-	throw "Not yet implemented";
-}
-
-void Ksiazka::zobacz_opis()
-{
-	//wyswietlenie pelnego opisu
-	cout << "\n\t\tKod ksiazki: " << kod << endl;
-	cout << "\n\t\tTytul: " << tytul << endl;
-	cout << "\n\t\tImie i nazwisko autora: " << autor << endl;
-	cout << "\n\t\tNazwa wydawnictwa: " << wydawnictwo << endl;
-}
-
 

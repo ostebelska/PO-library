@@ -1,13 +1,18 @@
 #include <exception>
+#include <iostream>
 using namespace std;
 
 #include "Wypozyczenie.h"
 
-void Wypozyczenie::zeskanuj_ksiazke() {
-	throw "Not yet implemented";
+void Wypozyczenie::zeskanuj_ksiazke()
+{
+	cout << "Wypozyczenie przebieglo pomyslnie." << endl;
+	getchar();
+	getchar();
 }
 
-void Wypozyczenie::szukaj_ksiazki() {
+void Wypozyczenie::szukaj_ksiazki()
+{
 	throw "Not yet implemented";
 }
 

@@ -8,6 +8,10 @@
 #include "Logowanie.h"
 #include "Rejestracja.h"
 #include "Rezerwacja.h"
+#include "Zwrot.h"
+#include "Wypozyczenie.h"
+#include "System.h"
+#include "Ksiazka.h"
 
 using namespace std;
 
@@ -31,8 +35,13 @@ void panel_sterowania()
 	Rejestracja r;
 	Logowanie l;
 	Rezerwacja rez;
-	int q = 1234;
-	string w = "root";
+	Wypozyczenie w;
+	Zwrot z;
+	System s;
+	Ksiazka ks;
+
+	int k = 1234;
+	string h = "root";
 
 	char x;
 	int ch;
@@ -57,7 +66,7 @@ void panel_sterowania()
 	{
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
-		l.wprowadzenie_danych(q,w);
+		l.wprowadzenie_danych(k,h);
 
 		int ch = 0;
 		while (ch != 9)
@@ -78,6 +87,8 @@ void panel_sterowania()
 			case 2:
 				rez.zarezerwuj();
 				break;
+			case 9:
+				exit(0);
 			default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 				getchar();
 				break;
@@ -108,16 +119,20 @@ void panel_sterowania()
 
 		if (adminUser == "root" && adminPassword == "root")
 		{
+			cout << "\n\n Zalogowanie na konto pracownika powiodlo sie!! Nacisnij jakikolwiek przycisk, aby kontynuowac..";
+			getchar();
+			getchar();
+			system("cls");
+
 			int choice = 0;
 			while (choice != 9)
 			{
-				cout << "\n\n Zalogowanie na konto pracownika powiodlo sie!! Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-				getchar();
-				system("cls");
 
 				cout << "\n1. Dodaj ksiazke";
 				cout << "\n2. Usun ksiazke";
-				cout << "\n3. List of All Books";
+				cout << "\n3. Wyswietl wszystkie ksiazki";
+				cout << "\n4. Wypozycz";
+				cout << "\n5. Zwroc";
 				cout << "\n9. Exit";
 				cout << "\n\n Wpisz swoj wybor : ";
 
@@ -134,6 +149,15 @@ void panel_sterowania()
 
 				case 2: b.usun_ksiazke(); break;
 				case 3: b.szukaj(); break;
+				case 4: w.zeskanuj_ksiazke(); break;
+				case 5:
+					cout << "Zeskanuj ksiazke.";
+
+					if (ks.kara = true)
+						z.oplata();
+					else
+						cout << "ZWROT PRZEBIEGL POMYSLNIE.";
+					break;
 				case 9: exit(0); break;
 
 				default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";

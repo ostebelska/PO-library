@@ -13,7 +13,7 @@ void System::nadanie_id() {
 	throw "Not yet implemented";
 }
 
-void System::sprawdzenie_kar() {
+bool System::sprawdzenie_kar() {
 	throw "Not yet implemented";
 }
 

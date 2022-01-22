@@ -1,8 +1,25 @@
 #include <exception>
+#include <iostream>
 using namespace std;
 
 #include "Zwrot.h"
 
-void Zwrot::oplata() {
-	throw "Not yet implemented";
+void Zwrot::oplata()
+{
+	char x;
+	cout << "Uregulowano oplate? y/n" << endl;
+	cin >> x;
+
+	if (x = 'y')
+	{
+		cout << "Operacja zwrotu przebiegla pomyslnie." << endl;
+		getchar();
+		getchar();
+	}
+	else
+	{
+		cout << "Prosze uregulowac zaplate.";
+		getchar();
+		getchar();
+	}
 }

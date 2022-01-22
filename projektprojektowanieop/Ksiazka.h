@@ -12,12 +12,12 @@ class Wypo¿yczenie;
 class Bibliotekarz;
 class Admin;
 
-int res_book(int, int); //sprawdzenie czy ksiazka jest w systemie
 
 class Ksiazka
 {
 public:
 	bool status;
+	bool kara;
 	int kod, numer;					//kod ksiazki/id
 	string tytul; 				//tytul
 	string autor; 				//imie i nazwisko autora
@@ -25,6 +25,7 @@ public:
 	int ch;
 	//nazwa wydawnictwa
 
+	Ksiazka(){}
 
 	Ksiazka(int kod, string tytul, string autor, int numer)
 	{
@@ -35,7 +36,5 @@ public:
 	}
 
 	void zmien_status();
-	void zarezerwuj();
-	void zobacz_opis();
-	void zwróæ();
+
 };

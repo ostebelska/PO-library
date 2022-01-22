@@ -10,7 +10,7 @@ class Rezerwacja;
 
 class Rezerwacja
 {
-public: void sprawdz_rezerwacje();
-
-public: void zarezerwuj();
+public: 
+	void sprawdz_rezerwacje();
+	void zarezerwuj();
 };
