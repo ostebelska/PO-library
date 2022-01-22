@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <string>
+#include<fstream>
 
 using namespace std;
 #include "System.h"
@@ -15,9 +16,17 @@ void Rejestracja::sprawdzenie_has³a()
 	throw "Not yet implemented";
 }
 
-void Rejestracja::utworzenie_karty()
+void Rejestracja::utworzenie_konta()
 {
-	throw "Not yet implemented";
+	nowy_uzytkownik.haslo == uzytkownik.haslo;
+	nowy_uzytkownik.id_karty = uzytkownik.id_karty;
+	fstream file;
+	file.open("uzytkownicy.txt", ios::out | ios::app);
+	file << " " << nowy_uzytkownik.nazwisko<< " " << uzytkownik.id_karty << " " << nowy_uzytkownik.mail<<endl;
+	file.close();
+	
+	cout << endl << endl;
+	cout << "Utworzono konto!";
 }
 
 void Rejestracja::utworzenie_has³a()
@@ -35,7 +44,6 @@ void Rejestracja::utworzenie_has³a()
 	}
 	else
 	{
-		nowy_uzytkownik.haslo == uzytkownik.haslo;
 		nadanie_id();
 	}
 
@@ -66,6 +74,7 @@ void Rejestracja::nadanie_id()
 	cout << "Twoje id:" << endl << liczba;
 
 	nowy_uzytkownik.id_karty = liczba;
-	nowy_uzytkownik.id_karty = uzytkownik.id_karty;
+
+	utworzenie_konta();
 	
 }

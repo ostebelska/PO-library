@@ -23,8 +23,7 @@ class Logowanie;
 class Admin;
 class Rejestracja;
 
-
-int main()
+void panel_sterowania()
 {
 	string adminUser;
 	string adminPassword;
@@ -35,9 +34,8 @@ int main()
 
 	char x;
 	int ch;
-
-
 	int opcja;
+
 	cout << "\n\n\t\t\t------------------------------------------";
 	cout << "\n\t\t\t\tWYPOZYCZALNIA KSIAZEK";
 	cout << "\n\t\t\t------------------------------------------";
@@ -66,7 +64,7 @@ int main()
 			cout << "\n\nPomyslnie zalogowano." << endl;
 			cout << "\n1. Szukaj ksiazki";
 			cout << "\n2. Zarezerwuj ksiazke";
-			cout << "\n9. Exit";
+			cout << "\n9. Wyjdz";
 			cout << "\n\n Wpisz swoj wybor : ";
 
 			cin >> ch;
@@ -93,7 +91,13 @@ int main()
 		cout << endl << endl;
 		cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
 		cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
-			exit(0);
+	
+		getchar();
+		getchar();
+		system("cls");
+
+		panel_sterowania();
+
 		break;
 	}
 	case 3:
@@ -152,5 +156,15 @@ int main()
 		break;
 	case 5:
 		exit(0);
-		}
 	}
+}
+
+int main()
+{
+
+	panel_sterowania();
+
+	return 0;
+
+
+}

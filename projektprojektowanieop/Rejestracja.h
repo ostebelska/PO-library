@@ -18,7 +18,7 @@ public:
 	Uzytkownik uzytkownik;
 
 	void sprawdzenie_has³a();
-	void utworzenie_karty();
+	void utworzenie_konta();
 	void utworzenie_has³a();
 	void uzupe³nienie_danych();
 	void nadanie_id();
