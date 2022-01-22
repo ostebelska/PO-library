@@ -5,7 +5,8 @@ using namespace std;
 
 #include"Raport.h"
 
-void Raport::utworz_raport() {
+void Raport::utworz_raport()
+{
 	fstream plik;
 	string tresc_raportu;
 
