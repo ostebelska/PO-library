@@ -23,9 +23,9 @@ void Rejestracja::utworzenie_konta(int karta, string haslo)
 	int id_karty = karta;
 	string _haslo= haslo;
 
-	cout << endl << endl;
-	cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
-	cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
+	cout << endl << endl << endl;
+	cout << "\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl << endl;
+	cout << "\t\t\t\tSPROBUJ SIE ZALOGOWAC." << endl << endl;
 
 	logowanie.wprowadzenie_danych(id_karty, _haslo);
 

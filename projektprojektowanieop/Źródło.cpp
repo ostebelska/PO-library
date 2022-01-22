@@ -12,6 +12,8 @@
 #include "Wypozyczenie.h"
 #include "System.h"
 #include "Ksiazka.h"
+#include "Admin.h"
+#include "Pracownik_biblioteki.h"
 
 using namespace std;
 
@@ -27,69 +29,6 @@ class Logowanie;
 class Admin;
 class Rejestracja;
 
-//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
-void menu_admina()
-{
-	System s;
-	Ksiazka ks;
-	Wypozyczenie w;
-	Zwrot z;
-	Baza_ksiazek b;
-
-	char x;
-
-	cout << "\n\n Zalogowanie na konto pracownika powiodlo sie!! Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-	getchar();
-	getchar();
-	system("cls");
-
-	int choice = 0;
-	while (choice != 9)
-	{
-
-		cout << "\n1. Dodaj ksiazke";
-		cout << "\n2. Usun ksiazke";
-		cout << "\n3. Wyswietl wszystkie ksiazki";
-		cout << "\n4. Wypozycz";
-		cout << "\n5. Zwroc";
-		cout << "\n9. Exit";
-		cout << "\n\n Wpisz swoj wybor : ";
-
-		cin >> choice;
-		switch (choice)
-		{
-		case 1:
-			do {
-				b.dodaj_ksiazke();
-				cout << "\n\nCzy chcesz dodac kolejna ksiazke?" << "(y/n) : ";
-				cin >> x;
-			} while (x == 'y');
-			break;
-
-		case 2: b.usun_ksiazke(); break;
-		case 3: b.szukaj(); break;
-		case 4:
-			cout << "Zeskanuj ksiazke." << endl;
-			w.zeskanuj_ksiazke();
-			break;
-		case 5:
-			cout << "Zeskanuj ksiazke." << endl;
-			if (ks.kara = true)
-				z.oplata();
-			else
-				cout << "ZWROT PRZEBIEGL POMYSLNIE." << endl;
-			break;
-		case 9: exit(0); break;
-
-		default:
-		{
-			cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-			getchar();
-		}
-		}
-		system("cls");
-	}
-}
 //	OGOLNY PANEL STEROWANIA/MENU
 
 void panel_sterowania()
@@ -104,6 +43,8 @@ void panel_sterowania()
 	Zwrot z;
 	System s;
 	Ksiazka ks, ks2;
+	Pracownik_biblioteki pracownik;
+
 
 	int k = 1234;
 	string h = "root";
@@ -122,7 +63,7 @@ void panel_sterowania()
 	cout << "\n\t\t\t3.\tADMINISTRATOR MENU";
 	cout << "\n\t\t\t4.\tWYSZUKAJ KSIAZKE";
 	cout << "\n\t\t\t5.\tWYJDZ";
-	cout << "\n\n Choose your option: ";
+	cout << "\n\n Wybierz odpowiednia opcje: ";
 	cin >> opcja;
 
 	switch (opcja)
@@ -194,7 +135,7 @@ void panel_sterowania()
 
 		if (adminUser == "root" && adminPassword == "root")
 		{
-			menu_admina();
+			pracownik.menu_pracownika();			//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
 		}
 		else
 		{

@@ -15,7 +15,8 @@ public:
 	string _haslo;
 
 public:
-	bool logowanie();
+	void logowanie();
+	void menu_pracownika();
 
 public: void raport();
 };

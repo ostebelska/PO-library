@@ -46,7 +46,7 @@ void Baza_ksiazek::usun_ksiazke()
     cout << "\n\n\t\t\t\tUsun ksiazke";
 
     // Append file in output mode
-    file1.open("ksiazki.txt", ios::app | ios::out);
+    file1.open("ksiazki1.txt", ios::app | ios::out);
     file.open("ksiazki.txt", ios::in);
 
     if (!file)
@@ -88,7 +88,7 @@ void Baza_ksiazek::usun_ksiazke()
     file.close();
     file1.close();
     remove("ksiazki.txt");
-    rename("ksiazki.txt", "ksiazki2.txt");
+    rename("ksiazki1.txt", "ksiazki.txt");
 }
 
 void Baza_ksiazek::szukaj()
@@ -106,7 +106,7 @@ void Baza_ksiazek::szukaj()
         cout << "\n\nBlad!!";
     else
     {
-        cout << "\n\n\nID ksiazki\tKsiazka" << "\tAutor\tNumer ksiazki \n\n";
+        cout << "\n\n\nID ksiazki\tKsiazka" << "\t\tAutor\t\tNumer ksiazki \n\n";
         file >> b_id >> b_name;
         file >> a_name >> no_copy;
 
@@ -140,14 +140,15 @@ void Baza_ksiazek::wyswietl_szukane()
         cout << "\n\nBlad!!";
     else
     {
-        cout << "\n\nTYTUL KSIAZKI: ";
+        cout << "\n\nTYTUL KSIAZKI LUB AUTOR: ";
         cin >> b_idd;
+
         file >> b_id >> b_name;
         file >> a_name >> no_copy;
 
         while (!file.eof())
         {
-            if (b_idd == b_name)
+            if (b_idd == b_name || b_idd == a_name)
             {
                 system("cls");
                 cout << "\n\n\t\t\tWYSZUKANA POZYCJA:";
