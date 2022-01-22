@@ -10,9 +10,15 @@ using namespace std;
 #include "System.h"
 #include "Ksiazka.h"
 #include "Pracownik_biblioteki.h"
+#include "Raport.h"
 
 void Pracownik_biblioteki::logowanie()
 {
+	throw "Not yet implemented";
+}
+
+void Pracownik_biblioteki::raport() {
+	
 	string adminUser;
 	string adminPassword;
 
@@ -40,6 +46,7 @@ void Pracownik_biblioteki::menu_pracownika()
 	Wypozyczenie w;
 	Zwrot z;
 	Baza_ksiazek b;
+	Raport raport;
 
 	char x;
 
@@ -57,6 +64,7 @@ void Pracownik_biblioteki::menu_pracownika()
 		cout << "\n3. Wyswietl wszystkie ksiazki";
 		cout << "\n4. Wypozycz";
 		cout << "\n5. Zwroc";
+		cout << "\n6. Utworz raport";
 		cout << "\n9. Exit";
 		cout << "\n\n Wpisz swoj wybor : ";
 
@@ -84,6 +92,8 @@ void Pracownik_biblioteki::menu_pracownika()
 			else
 				cout << "ZWROT PRZEBIEGL POMYSLNIE." << endl;
 			break;
+		case 6:
+			raport.utworz_raport();
 		case 9: exit(0); break;
 
 		default:
