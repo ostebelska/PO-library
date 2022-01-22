@@ -38,7 +38,7 @@ void Ksiazka::zobacz_opis()
 }
 
 //DO BIBLIOTEKARZA NALEZA TE METODY
-void Ksiazka::zwróæ()
+void Ksiazka::zwroc()
 {
 	throw "Not yet implemented";
 }

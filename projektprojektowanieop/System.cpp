@@ -21,15 +21,15 @@ void System::szukaj_uzytkownika() {
 	throw "Not yet implemented";
 }
 
-void System::utwórz_raport() {
+void System::utworz_raport() {
 	throw "Not yet implemented";
 }
 
-void System::wyœwietl_raport() {
+void System::wyswietl_raport() {
 	throw "Not yet implemented";
 }
 
-void System::zatwierdŸ_raport() {
+void System::zatwierdz_raport() {
 	throw "Not yet implemented";
 }
 
