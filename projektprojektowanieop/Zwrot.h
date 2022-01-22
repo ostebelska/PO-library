@@ -8,8 +8,5 @@ class Zwrot;
 
 class Zwrot
 {
-public: Bibliotekarz* _unnamed_Bibliotekarz_;
-public: Ksiazka* _unnamed_Ksiazka_;
-
 public: void oplata();
 };
