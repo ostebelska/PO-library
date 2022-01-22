@@ -8,7 +8,8 @@ void Rezerwacja::sprawdz_rezerwacje() {
 	throw "Not yet implemented";
 }
 
-void Rezerwacja::zarezerwuj() {
+void Rezerwacja::zarezerwuj()
+{
 	throw "Not yet implemented";
 }
 

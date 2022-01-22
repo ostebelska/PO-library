@@ -1,26 +1,28 @@
 #include <exception>
 #include <string>
+#include"Uzytkownik.h"
 using namespace std;
 
 
 class Baza_ksiazek;
 class Rejestracja;
 class System;
-class Nowy_uzytkownik;
+class Uzytkownik;
 
 class Nowy_uzytkownik
 {
-private: string _imie;
-private: string _nazwisko;
-private: string _mail;
-private: string _data_uro;
-public: Baza_ksiazek* _u¿ywa;
-public: Rejestracja* _unnamed_rejestracja_;
-public: System* _unnamed_system__;
+public:
 
-public: void wyszukaj_ksi¹¿kê();
+		string imie;
+		string nazwisko;
+		string mail;
+		string data_uro;
+		string haslo;
+		string id_karty;
 
-public: void powrót_do_menu();
-
-public: void nadanie_id();
+		Uzytkownik uzytkownik;
+		
+public: 
+	    void powrót_do_menu();
+	    void nadanie_id();
 };

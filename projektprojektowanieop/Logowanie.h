@@ -1,6 +1,9 @@
 #include <exception>
 #include <string>
 #include <iostream>
+#include"Uzytkownik.h"
+#ifndef LOGOWANIE_H
+#define LOGOWANIE_H
 using namespace std;
 
 class Uzytkownik;
@@ -10,9 +13,10 @@ class Logowanie;
 class Logowanie
 {
 public:
-	Uzytkownik* Uzytkownik;
-	//system_* _unnamed_system__;
+	Uzytkownik Uzytkownik;
 
 	void wprowadzenie_danych();
 
 };
+
+#endif

@@ -1,4 +1,10 @@
 #include <exception>
+#include"Nowy_uzytkownik.h"
+#include"Uzytkownik.h"
+#ifndef REJESTRACJA_H
+#define REJESTRACJA_H
+
+#include "System.h"
 using namespace std;
 
 class Nowy_uzytkownik;
@@ -7,18 +13,15 @@ class Rejestracja;
 
 class Rejestracja
 {
-public: Nowy_uzytkownik* _unnamed_nowy_u¿ytkownik_;
-public: System* _unnamed_system__;
+public:
+	Nowy_uzytkownik nowy_uzytkownik;
+	Uzytkownik uzytkownik;
 
-public: void sprawdzenie_has³a();
-
-public: void utworzenie_karty();
-
-public: void utworzenie_has³a();
-
-public: void uzupe³nienie_danych();
-
-public: Rejestracja();
-
-public: void nadanie_id();
+	void sprawdzenie_has³a();
+	void utworzenie_karty();
+	void utworzenie_has³a();
+	void uzupe³nienie_danych();
+	void nadanie_id();
 };
+
+#endif

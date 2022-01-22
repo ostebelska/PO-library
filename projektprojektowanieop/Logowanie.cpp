@@ -1,6 +1,8 @@
 #include <exception>
 #include <string>
 #include <iostream>
+#include "Uzytkownik.h"
+
 using namespace std;
 
 #include "Logowanie.h"
@@ -8,18 +10,18 @@ using namespace std;
 void Logowanie::wprowadzenie_danych()
 {
 	cout << "Wprowadz nr karty:";
-	//cin >> Uzytkownik.id_karty;
-
+	cin >> Uzytkownik.id_karty;
+	cout << endl;
 	cout << "Wprowadz haslo:";
-	//cin >> uzytkownik._haslo;
+	cin >> Uzytkownik.haslo;
 
-	/*if (uzytkownik._haslo != "root")
+	if (Uzytkownik.haslo != "root")
 	{
 		cout << "LOGOWANIE NIE POWIODLO SIE. ZLE HASLO.";
 	}
-	if (uzytkownik.id_karty != 1, 2, 3)
+	if (Uzytkownik.id_karty != 1234)
 	{
 		cout << "LOGOWANIE NIE POWIODLO SIE. ZLY NUMER KARTY.";
-	}*/
+	}
 }
 

@@ -2,28 +2,25 @@
 #include <string>
 #include <vector>
 #include<iostream>
+#ifndef UZYTKOWNIK_H
+#define UZYTKOWNIK_H
 using namespace std;
 
-class Ksiażka;
-class Baza_ksišżek;
-class logowanie;
 class Ksiazka;
 class Baza_ksiazek;
 class Logowanie;
 class Rezerwacja;
-class Wypożyczenie;
+class Wypozyczenie;
 class System;
-
 
 class Uzytkownik
 {
-	//private: int _id_karty;
-public: string _haslo;			//haslo do logowania
-
-
-
 public:
+	int id_karty;
+	string haslo;			//haslo do logowania
+
 	//bool logowanie();
 	void wyszukaj();
 	void rezerwacja();
 };
+#endif

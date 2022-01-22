@@ -1,4 +1,7 @@
 #include <exception>
+#ifndef SYSTEM_H
+#define SYSTEM_H
+
 using namespace std;
 
 class Uzytkownik;
@@ -11,13 +14,6 @@ class Raport;
 
 class System
 {
-public: Uzytkownik* _unnamed_Uøytkownik_;
-public: Pracownik_biblioteki* _unnamed_Pracownik_biblioteki_;
-public: Nowy_uzytkownik* _unnamed_nowy_uøytkownik_;
-public: Baza_ksiazek* _unnamed_Baza_ksiπøek_;
-public: Rejestracja* _unnamed_rejestracja_;
-public: Logowanie* _unnamed_logowanie_;
-public: Raport* _uøywa;
 
 public: void sprawdzenie_danych();
 
@@ -35,3 +31,5 @@ public: void zatwierdü_raport();
 
 public: void czy_moze_zarezerwowac();
 };
+
+#endif

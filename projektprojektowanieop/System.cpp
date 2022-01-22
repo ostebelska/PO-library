@@ -1,9 +1,11 @@
 #include <exception>
 using namespace std;
 
+
 #include"System.h"
 
-void System::sprawdzenie_danych() {
+void System::sprawdzenie_danych()
+{
 	throw "Not yet implemented";
 }
 

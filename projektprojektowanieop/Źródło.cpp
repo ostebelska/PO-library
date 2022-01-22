@@ -5,6 +5,9 @@
 #include <fstream>
 #include <exception>
 #include "Baza_ksiazek.h"
+#include "Logowanie.h"
+#include "Rejestracja.h"
+#include "Rezerwacja.h"
 
 using namespace std;
 
@@ -20,45 +23,18 @@ class Logowanie;
 class Admin;
 class Rejestracja;
 
-/*
-bool passwords()
-{
-	int i = 0;
-	char ch, st[21], ch1[21] = { "0000" };
-	cout << "\n\n\t\tEnter Password : ";
-	while (1)
-	{
-		ch = getchar();
-		if (ch == 13)
-		{
-			st[i] = '\0';
-			break;
-		}
-		else if (ch == 8 && i > 0)
-		{
-			i--;
-			cout << "\b \b";
-		}
-		else
-		{
-			cout << "*";
-			st[i] = ch;
-			i++;
-		}
-	}
-	for (i = 0; st[i] == ch1[i] && st[i] != '\0' && ch1[i] != '\0'; i++);
-	if (st[i] == '\0' && ch1[i] == '\0')
-		return 1;
-	else
-		return 0;
-}
-*/
+
 int main()
 {
 	string adminUser;
 	string adminPassword;
 	Baza_ksiazek b;
+	Rejestracja r;
+	Logowanie l;
+	Rezerwacja rez;
+
 	char x;
+	int ch;
 
 
 	int opcja;
@@ -78,17 +54,55 @@ int main()
 	{
 	case 1:
 		//logowanie
-		Logowanie l();
+	{
+		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
+		l.wprowadzenie_danych();
+
+		int ch = 0;
+		while (ch != 9)
+		{
+			system("cls");
+			cout << "\n\nPomyslnie zalogowano." << endl;
+			cout << "\n1. Szukaj ksiazki";
+			cout << "\n2. Zarezerwuj ksiazke";
+			cout << "\n9. Exit";
+			cout << "\n\n Wpisz swoj wybor : ";
+
+			cin >> ch;
+			switch (ch)
+			{
+			case 1:
+				b.wyswietl_szukane();
+				break;
+			case 2:
+				rez.zarezerwuj();
+				break;
+			default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
+				getchar();
+				break;
+			}
+			system("cls");
+		}
+	}
 	case 2:
-		Rejestracja r();
+	{
+		system("cls");
+		cout << "\n\t\t\t\tREJESTRACJA" << endl;
+		r.uzupe³nienie_danych();
+		cout << endl << endl;
+		cout << "\n\t\t\t\tPOMYSLNIE ZAREJESTROWANO. NA TWOJEGO MAILA WYSLANO POTWIERDZENIE." << endl;
+		cout << "\n\t\t\t\tSPROBUJ SIE ZALOGOWAC.";
+			exit(0);
+		break;
+	}
 	case 3:
 		//menu administratora/ pracownika biblioteki
 
-		cout << "\n ---------- Admin Login -------";
-		cout << "\n\n Enter username: ";
+		cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
+		cout << "\n\n Wpisz login: ";
 		cin >> adminUser;
-		cout << "\n Enter password:";
+		cout << "\n Wpisz haslo:";
 		cin >> adminPassword;
 
 		if (adminUser == "root" && adminPassword == "root")
@@ -97,6 +111,9 @@ int main()
 			while (choice != 9)
 			{
 				cout << "\n\n Zalogowanie na konto pracownika powiodlo sie!! Nacisnij jakikolwiek przycisk, aby kontynuowac..";
+				getchar();
+				system("cls");
+
 				cout << "\n1. Dodaj ksiazke";
 				cout << "\n2. Usun ksiazke";
 				cout << "\n3. List of All Books";
@@ -116,6 +133,7 @@ int main()
 
 				case 2: b.usun_ksiazke(); break;
 				case 3: b.szukaj(); break;
+				case 9: exit(0); break;
 
 				default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 					getchar();
@@ -127,11 +145,12 @@ int main()
 		{
 			cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 			getchar(); getchar();
+		}
+		break;
 	case 4:
 		b.wyswietl_szukane();
-
+		break;
 	case 5:
 		exit(0);
 		}
 	}
-}

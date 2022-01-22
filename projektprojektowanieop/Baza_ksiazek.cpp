@@ -98,13 +98,13 @@ void Baza_ksiazek::szukaj()
     cout << "\n\n\t\t\t\t\tWSZYSTKIE KSIAZKI";
 
     // Open the file in input mode
-    file.open("txt.txt", ios::in);
+    file.open("txt1.txt", ios::in);
 
     if (!file)
         cout << "\n\nBlad!!";
     else
     {
-        cout << "\n\n\nID ksiazki\t\tKsiazka" << "\t\tAutor\t\tNumer ksiazki \n\n";
+        cout << "\n\n\nID ksiazki\t\tKsiazka" << "\tAutor\tNumer ksiazki \n\n";
         file >> b_id >> b_name;
         file >> a_name >> no_copy;
 
