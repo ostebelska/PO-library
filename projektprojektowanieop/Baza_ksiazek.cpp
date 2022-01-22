@@ -6,6 +6,7 @@
 using namespace std;
 
 #include "Baza_ksiazek.h"
+#include "Ksiazka.h"
 
 void Baza_ksiazek::dodaj_ksiazke()
 {
@@ -14,6 +15,7 @@ void Baza_ksiazek::dodaj_ksiazke()
     int no_copy;
     string b_name, a_name;
     int b_id;
+    bool status = true;
 
     cout << "\n\n\t\t\t\tDODAJ KSIAZKE:";
     cout << "\n\nID KSIAZKI: ";
@@ -28,10 +30,11 @@ void Baza_ksiazek::dodaj_ksiazke()
     // Open file in append or
     // output mode
     file.open("ksiazki.txt", ios::out | ios::app);
-    file << " " << b_id << " " << b_name << " " << a_name << " " << no_copy << "\n";
+    file << " " << b_id << " " << b_name << " " << a_name << " " << no_copy <<status<< "\n";
     file.close();
 
-    Ksiazka* ksiazka(int b_id, string b_name, string a_name, int no_copy);
+    Ksiazka ksiazka(int b_id, string b_name, string a_name, int no_copy, bool status);
+
 }
 
 void Baza_ksiazek::usun_ksiazke()

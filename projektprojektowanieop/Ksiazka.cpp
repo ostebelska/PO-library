@@ -22,5 +22,15 @@ void Ksiazka::zmien_status()
 
 }
 
+void Ksiazka::wyswietl_status(bool status)
+{
+	if (status = true)
+	{
+		cout << "KSIAZKA JEST DOSTEPNA!";
+	}
+	else
+		cout << "KSIAZKA NIEDOSTEPNA";
+}
+
 
 

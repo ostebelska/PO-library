@@ -1,5 +1,8 @@
 #include <exception>
 #include <string>
+#include "Ksiazka.h"
+#ifndef REZERWACJA_H
+#define REZERWACJA_H
 using namespace std;
 
 class Uzytkownik;
@@ -11,6 +14,8 @@ class Rezerwacja;
 class Rezerwacja
 {
 public: 
+	Ksiazka ksiazka;
 	void sprawdz_rezerwacje();
-	void zarezerwuj();
+	void zarezerwuj(Ksiazka k);
 };
+#endif

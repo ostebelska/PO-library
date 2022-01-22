@@ -7,8 +7,7 @@ using namespace std;
 void Wypozyczenie::zeskanuj_ksiazke()
 {
 	cout << "Wypozyczenie przebieglo pomyslnie." << endl;
-	getchar();
-	getchar();
+	getchar(), getchar();
 }
 
 void Wypozyczenie::szukaj_ksiazki()

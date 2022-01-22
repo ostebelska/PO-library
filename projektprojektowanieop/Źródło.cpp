@@ -27,6 +27,7 @@ class Logowanie;
 class Admin;
 class Rejestracja;
 
+//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
 void menu_admina()
 {
 	System s;
@@ -89,6 +90,8 @@ void menu_admina()
 		system("cls");
 	}
 }
+//	OGOLNY PANEL STEROWANIA/MENU
+
 void panel_sterowania()
 {
 	string adminUser;
@@ -100,7 +103,7 @@ void panel_sterowania()
 	Wypozyczenie w;
 	Zwrot z;
 	System s;
-	Ksiazka ks;
+	Ksiazka ks, ks2;
 
 	int k = 1234;
 	string h = "root";
@@ -108,6 +111,7 @@ void panel_sterowania()
 	char x;
 	int ch;
 	int opcja;
+	char y;
 
 	cout << "\n\n\t\t\t------------------------------------------";
 	cout << "\n\t\t\t\tWYPOZYCZALNIA KSIAZEK";
@@ -124,11 +128,10 @@ void panel_sterowania()
 	switch (opcja)
 	{
 	case 1:
-		//logowanie
 	{
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
-		l.wprowadzenie_danych(k,h);
+		l.wprowadzenie_danych(k, h); //ustalone wartosci dla hasla i id karty
 
 		int ch = 0;
 		while (ch != 9)
@@ -147,8 +150,19 @@ void panel_sterowania()
 				b.wyswietl_szukane();
 				break;
 			case 2:
-				rez.zarezerwuj();
+			{
+				cout << "Aby wpisaæ tytul ksiazki, ktora chcesz zarezerwowac wcisnij dowolny przycisk:" << endl;
+				getchar(), getchar();
+
+				b.wyswietl_szukane();
+				cout << "Czy napewno chcesz zarezerwowac dana ksiazke?(y/n)" << endl;
+				cin >> y;
+				if (y == 'y')
+				{
+					rez.zarezerwuj(ks2); //rezerwacja ksiazki
+				}
 				break;
+			}
 			case 9:
 				exit(0);
 			default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
@@ -164,15 +178,14 @@ void panel_sterowania()
 		cout << "\n\t\t\t\tREJESTRACJA" << endl;
 		r.uzupe³nienie_danych();
 		cout << endl << endl;
-	
+
 		getchar(); getchar();
 		system("cls");
-
-		break;
 	}
-	case 3:
-		//menu administratora/ pracownika biblioteki
+		break;
 
+	case 3:
+	{
 		cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
 		cout << "\n\n Wpisz login: ";
 		cin >> adminUser;
@@ -188,7 +201,9 @@ void panel_sterowania()
 			cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 			getchar(); getchar();
 		}
+
 		break;
+	}
 	case 4:
 		b.wyswietl_szukane();
 		break;

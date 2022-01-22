@@ -1,4 +1,6 @@
 #include <exception>
+#ifndef RAPORT_H
+#define RAPORT_H
 using namespace std;
 
 
@@ -13,3 +15,4 @@ public: System* _system_;
 
 public: void utworz_raport();
 };
+#endif

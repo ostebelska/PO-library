@@ -3,6 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#ifndef ADMIN_H
+#define ADMIN_H
+
 using namespace std;
 
 
@@ -27,3 +30,4 @@ public: void dodaj_ksiazke();
 
 public: void usun_ksiazke();
 };
+#endif

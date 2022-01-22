@@ -16,9 +16,6 @@ class Baza_ksiazek;
 class Baza_ksiazek
 {
 public:
-    //int _ksiazka;
-    //Admin* _dodaje_usuwa;
-    //Ksiazka* ksiazka;
 
     Baza_ksiazek() {};
 

@@ -10,7 +10,7 @@ void Zwrot::oplata()
 	cout << "Uregulowano oplate? y/n" << endl;
 	cin >> x;
 
-	if (x = 'y')
+	if (x == 'y')
 	{
 		cout << "Operacja zwrotu przebiegla pomyslnie." << endl;
 		getchar();

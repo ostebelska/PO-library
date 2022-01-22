@@ -1,6 +1,9 @@
 #include <exception>
 #include <string>
 #include <iostream>
+#ifndef KSIAZKA_H
+#define KSIAZKA_H
+
 using namespace std;
 
 
@@ -27,14 +30,16 @@ public:
 
 	Ksiazka(){}
 
-	Ksiazka(int kod, string tytul, string autor, int numer)
+	Ksiazka(int kod, string tytul, string autor, int numer, bool status)
 	{
 		this->kod = kod;
 		this->tytul = tytul;
 		this->autor = autor;
 		this->numer = numer;
+		this->status = status;
 	}
 
 	void zmien_status();
-
+	void wyswietl_status(bool status);
 };
+#endif
