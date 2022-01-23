@@ -31,6 +31,7 @@ class Rejestracja;
 
 void panel_sterowania()
 {
+	
 
 	Baza_ksiazek b;
 	Rejestracja r;
@@ -49,7 +50,7 @@ void panel_sterowania()
 	char x;
 	int ch;
 	int opcja;
-	char y;
+	string y;
 
 	cout << "\n\n\t\t\t------------------------------------------";
 	cout << "\n\t\t\t\tWYPOZYCZALNIA KSIAZEK";
@@ -70,7 +71,7 @@ void panel_sterowania()
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
 		l.wprowadzenie_danych(k, h); //ustalone wartosci dla hasla i id karty
-		l.logowanie();
+		break;
 	}
 	case 2:
 	{
@@ -95,9 +96,13 @@ void panel_sterowania()
 		b.wyswietl_szukane();
 		cout << endl << "Chcesz powrocic do panelu glownego?(y/n)" << endl;
 		cin >> y;
-		if (y = 'y')
+		if (y == "y")
+		{
 			system("cls");
 			panel_sterowania();
+		}
+		else
+			exit(0);
 		break;
 	}
 	case 5:
@@ -107,10 +112,7 @@ void panel_sterowania()
 
 int main()
 {
-
 	panel_sterowania();
 
 	return 0;
-
-
 }

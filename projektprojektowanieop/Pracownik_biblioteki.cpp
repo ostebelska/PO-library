@@ -93,6 +93,7 @@ void Pracownik_biblioteki::menu_pracownika()
 			break;
 		case 6:
 			raport.utworz_raport();
+			break;
 		case 9: exit(0); break;
 
 		default:

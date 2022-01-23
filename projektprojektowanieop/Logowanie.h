@@ -15,6 +15,7 @@ class Uzytkownik;
 class System;
 class Logowanie;
 
+
 class Logowanie
 {
 public:

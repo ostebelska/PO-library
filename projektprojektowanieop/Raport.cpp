@@ -16,4 +16,10 @@ void Raport::utworz_raport()
 	plik.open("raport.txt", ios::out | ios::app);
 	plik << tresc_raportu << "\n";
 	plik.close();
+
+	cout << endl;
+	cout << "Raport zostal dodany." << endl;
+	getchar();
+	getchar();
+
 }

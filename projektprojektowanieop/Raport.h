@@ -10,7 +10,6 @@ class Raport;
 
 class Raport
 {
-
 public: void utworz_raport();
 };
 #endif

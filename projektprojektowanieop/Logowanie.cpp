@@ -1,9 +1,9 @@
 #include <exception>
 #include <string>
 #include <iostream>
-#include<fstream>
+#include <fstream>
 #include "Uzytkownik.h"
-#include"Rezerwacja.h"
+#include "Rezerwacja.h"
 
 using namespace std;
 
