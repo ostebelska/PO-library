@@ -163,10 +163,10 @@ void Baza_ksiazek::wyswietl_szukane()
             file >> b_id >> b_name;
             file >> a_name >> no_copy;
         }
-        system("pause");
+        
         file.close();
 
         if (count == 0)
-            cout << "\n\nNie znaleziono ksiazki...";
+            cout << "\n\nNIE ZNALEZIONO POZYCJI...";
     }
 }

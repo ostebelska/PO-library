@@ -1,5 +1,6 @@
 #include <exception>
 #include <string>
+
 using namespace std;
 #include "Baza_ksiazek.h"
 #include "Logowanie.h"
@@ -82,11 +83,12 @@ void Pracownik_biblioteki::menu_pracownika()
 		case 2: b.usun_ksiazke(); break;
 		case 3: b.szukaj(); break;
 		case 4:
-			cout << "Zeskanuj ksiazke." << endl;
+			cout << "ZESKANUJ KSIAZKE." << endl;
+			system("pause");
 			w.zeskanuj_ksiazke();
 			break;
 		case 5:
-			cout << "Zeskanuj ksiazke." << endl;
+			cout << "ZESKANUJ KSIAZKE." << endl;
 			if (ks.kara = true)
 				z.oplata();
 			else

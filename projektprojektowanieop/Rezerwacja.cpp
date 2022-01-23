@@ -15,10 +15,6 @@ void Rezerwacja::sprawdz_rezerwacje()
 
 void Rezerwacja::zarezerwuj()
 {
-	cout << "\t\tPOMYSLNIE ZAREZERWOWANO KSIAZKE." << endl;
-	cout << "ZAPRASZAMY DO WYPOZYCZENIA W PUNKCIE STACJONARNYM NASZEJ WYPOZYCZALNI." << endl;
-	cout << "\t\tWIECEJ INFORMACJI NA E-MAILU.";
-
-	getchar();
-
+	
+	cout << "ok";
 }

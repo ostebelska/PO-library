@@ -18,6 +18,7 @@ class Logowanie;
 class Logowanie
 {
 public:
+
 	Uzytkownik uzytkownik;
 	Baza_ksiazek b;
 	Rezerwacja rez;
