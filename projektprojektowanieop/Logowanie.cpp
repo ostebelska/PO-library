@@ -14,7 +14,7 @@ void Logowanie::wprowadzenie_danych(int kod, string haslo)
 	int nr;
 	string pass;
 
-	cout << "Wprowadz nr karty:";
+	cout << "Wprowadz ID karty:";
 	cin >> nr;
 	cout << endl;
 	cout << "Wprowadz haslo:";
@@ -53,34 +53,7 @@ void Logowanie::logowanie()
 			break;
 		case 2:
 		{
-			//rez.zarezerwuj();
-			int y;
-
-			cout << "Aby wyszukac ksiazke do zarezerwowania, wcisnij dowolny przycisk:" << endl;
-			getchar(), getchar();
-
-			b.wyswietl_szukane();
-			cout << "Czy napewno chcesz zarezerwowac dana ksiazke?(y/n)" << endl;
-
-			cin >> y;
-
-			if (y == 'y')
-			{
-
-				cout << "\t\tPOMYSLNIE ZAREZERWOWANO KSIAZKE." << endl;
-				cout << "ZAPRASZAMY DO WYPOZYCZENIA W PUNKCIE STACJONARNYM NASZEJ WYPOZYCZALNI." << endl;
-				cout << "\t\tWIECEJ INFORMACJI NA E-MAILU.";
-
-				logowanie();
-			}
-			else
-			{
-				cout << "POWROT DO MENU";
-
-				logowanie();
-			}
-
-			getchar();
+			rez.zarezerwuj();
 
 			break;
 		}

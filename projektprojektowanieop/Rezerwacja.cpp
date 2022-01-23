@@ -16,5 +16,29 @@ void Rezerwacja::sprawdz_rezerwacje()
 void Rezerwacja::zarezerwuj()
 {
 	
-	cout << "ok";
+	//rez.zarezerwuj();
+	string y;
+
+	cout << "Aby wyszukac ksiazke do zarezerwowania, wcisnij dowolny przycisk:" << endl;
+	getchar(), getchar();
+
+	b.wyswietl_szukane();
+
+	cout << "Czy napewno chcesz zarezerwowac dana ksiazke?(y/n)" << endl;
+
+	cin >> y;
+
+	if (y == "y")
+	{
+		cout << "\t\tPOMYSLNIE ZAREZERWOWANO KSIAZKE." << endl;
+		cout << "ZAPRASZAMY DO WYPOZYCZENIA W PUNKCIE STACJONARNYM NASZEJ WYPOZYCZALNI." << endl;
+		cout << "\t\tWIECEJ INFORMACJI NA E-MAILU." << endl << endl;
+
+		system("pause");
+	}
+	else
+	{
+		cout << "POWROT DO MENU";
+
+	}
 }
