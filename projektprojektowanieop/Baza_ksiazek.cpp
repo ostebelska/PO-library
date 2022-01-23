@@ -12,7 +12,7 @@ void Baza_ksiazek::dodaj_ksiazke()
 {
     system("cls");
     fstream file;
-    int no_copy;
+    string w_name;
     string b_name, a_name;
     int b_id;
     bool status = true;
@@ -24,13 +24,13 @@ void Baza_ksiazek::dodaj_ksiazke()
     cin >> b_name;
     cout << "\nNAZWISKO AUTORA : ";
     cin >> a_name;
-    cout << "\nNR: ";
-    cin >> no_copy;
+    cout << "\nWYDAWNICTWO: ";
+    cin >> w_name;
 
     // Open file in append or
     // output mode
     file.open("ksiazki.txt", ios::out | ios::app);
-    file << " " << b_id << " " << b_name << " " << a_name << " " << no_copy <<status<< "\n";
+    file << " " << b_id << " " << b_name << " " << a_name << " " << w_name <<status<< "\n";
     file.close();
 
     Ksiazka ksiazka(int b_id, string b_name, string a_name, int no_copy, bool status);
@@ -41,8 +41,8 @@ void Baza_ksiazek::usun_ksiazke()
 {
     system("cls");
     fstream file, file1;
-    int no_copy, count = 0;
-    string b_id, b_idd, b_name, a_name;
+    int count = 0;
+    string b_id, b_idd, b_name, a_name, w_name;
     cout << "\n\n\t\t\t\tUsun ksiazke";
 
     // Append file in output mode
@@ -56,7 +56,7 @@ void Baza_ksiazek::usun_ksiazke()
         cout << "\n\nID KSIAZKI: ";
         cin >> b_id;
         file >> b_idd >> b_name;
-        file >> a_name >> no_copy;
+        file >> a_name >> w_name;
         while (!file.eof())
         {
 
@@ -73,10 +73,10 @@ void Baza_ksiazek::usun_ksiazke()
                 file1 << " " << b_idd
                 << " " << b_name
                 << " " << a_name
-                << " " << no_copy
+                << " " << w_name
                 << "\n\n";
             file >> b_idd >> b_name;
-            file >> a_name >> no_copy;
+            file >> a_name >> w_name;
         }
         if (count == 0)
             cout << "\n\nID NIE ODNALEZIONO. "
@@ -95,8 +95,7 @@ void Baza_ksiazek::szukaj()
 {
     system("cls");
     fstream file;
-    int no_copy;
-    string b_name, b_id, a_name;
+    string b_name, b_id, a_name, w_name;
     cout << "\n\n\t\t\t\t\tWSZYSTKIE KSIAZKI";
 
     // Open the file in input mode
@@ -106,17 +105,17 @@ void Baza_ksiazek::szukaj()
         cout << "\n\nBlad!!";
     else
     {
-        cout << "\n\n\nID ksiazki\tKsiazka" << "\t\tAutor\t\tNumer ksiazki \n\n";
+        cout << "\n\n\nID ksiazki\tKsiazka" << "\t\tAutor\t\tWydawnictwo \n\n";
         file >> b_id >> b_name;
-        file >> a_name >> no_copy;
+        file >> a_name >> w_name;
 
         while (!file.eof())
         {
             cout << "  " << b_id << "\t\t" << b_name
-                << "\t\t" << a_name << "\t\t" << no_copy
+                << "\t\t" << a_name << "\t\t" << w_name
                 << "\n\n";
             file >> b_id >> b_name;
-            file >> a_name >> no_copy;
+            file >> a_name >> w_name;
         }
 
         system("pause");
@@ -128,7 +127,8 @@ void Baza_ksiazek::wyswietl_szukane()
 {
     system("cls");
     fstream file;
-    int no_copy, count = 0;
+    string w_name;
+    int count = 0;
     string b_id, b_name, a_name, b_idd;
 
     cout << "\n\n\t\t\t\tWyszukaj konkretnej pozycji:";
@@ -144,7 +144,7 @@ void Baza_ksiazek::wyswietl_szukane()
         cin >> b_idd;
 
         file >> b_id >> b_name;
-        file >> a_name >> no_copy;
+        file >> a_name >> w_name;
 
         while (!file.eof())
         {
@@ -155,13 +155,13 @@ void Baza_ksiazek::wyswietl_szukane()
                 cout << "\n\nID : " << b_id;
                 cout << "\nTytul : " << b_name;
                 cout << "\nAutor : " << a_name;
-                cout << "\nNumer : " << no_copy;
+                cout << "\nWydawnictwo : " << w_name;
                 cout << endl << endl;
                 count++;
                 break;
             }
             file >> b_id >> b_name;
-            file >> a_name >> no_copy;
+            file >> a_name >> w_name;
         }
         
         file.close();
