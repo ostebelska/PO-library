@@ -12,7 +12,6 @@
 #include "Wypozyczenie.h"
 #include "System.h"
 #include "Ksiazka.h"
-#include "Admin.h"
 #include "Pracownik_biblioteki.h"
 
 using namespace std;
@@ -26,7 +25,6 @@ class Wypo¿yczenie;
 class System;
 class Uzytkownik;
 class Logowanie;
-class Admin;
 class Rejestracja;
 
 //	OGOLNY PANEL STEROWANIA/MENU
