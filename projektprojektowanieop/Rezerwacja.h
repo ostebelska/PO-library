@@ -21,7 +21,7 @@ public:
 	Ksiazka ksiazka;
 	Baza_ksiazek b;
 
-	void sprawdz_rezerwacje();
+	void sprawdzRezerwacje();
 	void zarezerwuj();
 };
 #endif

@@ -12,12 +12,7 @@ using namespace std;
 #include "Uzytkownik.h"
 #include"Logowanie.h"
 
-void Rejestracja::sprawdzenie_has³a()
-{
-	throw "Not yet implemented";
-}
-
-void Rejestracja::utworzenie_konta(int karta, string haslo)
+void Rejestracja::utworzenieKonta(int karta, string haslo)
 {
 
 	int id_karty = karta;
@@ -29,11 +24,11 @@ void Rejestracja::utworzenie_konta(int karta, string haslo)
 
 	system("pause");
 
-	logowanie.wprowadzenie_danych(id_karty, _haslo);
+	logowanie.wprowadzenieDanych(id_karty, _haslo);
 	
 }
 
-void Rejestracja::utworzenie_has³a()
+void Rejestracja::utworzenieHasla()
 {
 	cout << "Wpisz haslo, ktore zawiera do 8 znakow:";
 	cin >> nowy_uzytkownik.haslo;
@@ -43,16 +38,15 @@ void Rejestracja::utworzenie_has³a()
 	if(_haslo.length()>8)
 	{
 		cout << "Za duzo znakow!";
-		utworzenie_has³a();
+		utworzenieHasla();
 	}
 	else
 	{
-		nadanie_id(_haslo);
+		nadanieId(_haslo);
 	}
-
 }
 
-void Rejestracja::uzupe³nienie_danych()
+void Rejestracja::uzupelnienieDanych()
 {
 	cout << "Uzupelnij dane:" << endl;
 	cout << "Podaj imie:" << endl;
@@ -65,11 +59,11 @@ void Rejestracja::uzupe³nienie_danych()
 	cin >> nowy_uzytkownik.mail;
 
 	//system.sprawdzenie_danych();
-	utworzenie_has³a();
+	utworzenieHasla();
 
 }
 
-void Rejestracja::nadanie_id(string haslo_)
+void Rejestracja::nadanieId(string haslo_)
 {
 	srand(time(NULL));
 	int liczba = (rand() % 1200) + 128;
@@ -81,6 +75,6 @@ void Rejestracja::nadanie_id(string haslo_)
 	string haslo_nowe = haslo_;
 	int kod = liczba;
 
-	utworzenie_konta(kod, haslo_nowe);
+	utworzenieKonta(kod, haslo_nowe);
 	
 }

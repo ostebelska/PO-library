@@ -5,7 +5,7 @@ using namespace std;
 
 #include"Ksiazka.h"
 
-void Ksiazka::zmien_status()
+void Ksiazka::zmienStatus()
 {
 
 	string status;
@@ -22,7 +22,7 @@ void Ksiazka::zmien_status()
 
 }
 
-void Ksiazka::wyswietl_status(bool status)
+void Ksiazka::wyswietlStatus(bool status)
 {
 	if (status = true)
 	{

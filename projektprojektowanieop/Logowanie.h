@@ -26,7 +26,7 @@ public:
 	Ksiazka ks2;
 
 
-	void wprowadzenie_danych(int, string);
+	void wprowadzenieDanych(int, string);
 	void logowanie();
 };
 

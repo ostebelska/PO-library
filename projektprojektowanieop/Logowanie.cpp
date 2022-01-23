@@ -9,49 +9,48 @@ using namespace std;
 
 #include "Logowanie.h"
 
-void Logowanie::wprowadzenie_danych(int kod, string haslo)
+void Logowanie::wprowadzenieDanych(int kod, string haslo)
 {
-	int nr;
+	int id;
 	char c;
 	string pass;
 
 	cout <<endl<<"Wprowadz ID karty:";
-	cin >> nr;
+	cin >> id;
 	cout << endl;
 	cout << "Wprowadz haslo:";
 
 	cin >> pass;
 
-	if (pass != haslo || nr != kod)
+	if (pass != haslo || id != kod)
 	{
 		cout << "LOGOWANIE NIE POWIODLO SIE. ZLE DANE.";
 	}
 	else
 	{
 		logowanie();
-	}
-	
+	}	
 }
 
 void Logowanie::logowanie()
 {
-	int ch = 0;
+	int choice = 0;
 	int y;
 
-	while (ch != 9)
+	while (choice != 3)
 	{
 		system("cls");
 		cout << "\n\nZALOGOWANO POMYSLNIE." << endl << endl;
 		cout << "\n1. Szukaj ksiazki";
 		cout << "\n2. Zarezerwuj ksiazke";
-		cout << "\n9. Wyloguj sie";
+		cout << "\n3. Wyloguj sie";
 		cout << "\n\n Wpisz swoj wybor : ";
 
-		cin >> ch;
-		switch (ch)
+		cin >> choice;
+		switch (choice)
 		{
 		case 1:
-			b.wyswietl_szukane();
+			b.wyswietlSzukane();
 			system("pause");
 			break;
 		case 2:
@@ -59,7 +58,7 @@ void Logowanie::logowanie()
 			rez.zarezerwuj();
 			break;
 		}
-		case 9:
+		case 3:
 			exit(0);
 		default: cout << "\n\nZly wybor." << endl;
 			system("pause");

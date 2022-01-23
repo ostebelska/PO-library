@@ -39,7 +39,7 @@ public:
 		this->status = status;
 	}
 
-	void zmien_status();
-	void wyswietl_status(bool status);
+	void zmienStatus();
+	void wyswietlStatus(bool status);
 };
 #endif

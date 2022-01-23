@@ -10,6 +10,6 @@ class Raport;
 
 class Raport
 {
-public: void utworz_raport();
+public: void utworzRaport();
 };
 #endif

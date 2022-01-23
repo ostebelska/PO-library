@@ -15,20 +15,20 @@ using namespace std;
 
 void Pracownik_biblioteki::logowanie()
 {
-	string adminUser;
-	string adminPassword;
+	string admin_login;
+	string admin_haslo;
 
 	system("cls");
 
 	cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
 	cout << "\n\n Wpisz login: ";
-	cin >> adminUser;
+	cin >> admin_login;
 	cout << "\n Wpisz haslo:";
-	cin >> adminPassword;
+	cin >> admin_haslo;
 
-	if (adminUser == "root" && adminPassword == "root")
+	if (admin_login == "root" && admin_haslo == "root")
 	{
-		menu_pracownika();			//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
+		menuPracownika();			//PANEL STEROWANIA DLA  PRACOWNIKA BIBLIOTEKI
 	}
 	else
 	{
@@ -37,13 +37,13 @@ void Pracownik_biblioteki::logowanie()
 	}
 }
 
-void Pracownik_biblioteki::menu_pracownika()
+void Pracownik_biblioteki::menuPracownika()
 {
 	System s;
-	Ksiazka ks;
-	Wypozyczenie w;
-	Zwrot z;
-	Baza_ksiazek b;
+	Ksiazka ksiazka;
+	Wypozyczenie wypozyczenie;
+	Zwrot zwrot;
+	Baza_ksiazek baza;
 	Raport raport;
 
 	char x;
@@ -54,16 +54,15 @@ void Pracownik_biblioteki::menu_pracownika()
 	system("cls");
 
 	int choice = 0;
-	while (choice != 9)
+	while (choice != 7)
 	{
-
 		cout << "\n1. Dodaj ksiazke";
 		cout << "\n2. Usun ksiazke";
 		cout << "\n3. Wyswietl wszystkie ksiazki";
 		cout << "\n4. Wypozycz";
 		cout << "\n5. Zwroc";
 		cout << "\n6. Utworz raport";
-		cout << "\n9. Zakoncz prace";
+		cout << "\n7. Zakoncz prace";
 		cout << "\n\n Wpisz swoj wybor : ";
 
 		cin >> choice;
@@ -71,30 +70,30 @@ void Pracownik_biblioteki::menu_pracownika()
 		{
 		case 1:
 			do {
-				b.dodaj_ksiazke();
+				baza.dodajKsiazke();
 				cout << "\n\nCzy chcesz dodac kolejna ksiazke?" << "(y/n) : ";
 				cin >> x;
 			} while (x == 'y');
 			break;
 
-		case 2: b.usun_ksiazke(); break;
-		case 3: b.szukaj(); break;
+		case 2: baza.usunKsiazke(); break;
+		case 3: baza.szukaj(); break;
 		case 4:
 			cout << "ZESKANUJ KSIAZKE." << endl;
 			system("pause");
-			w.zeskanuj_ksiazke();
+			wypozyczenie.zeskanujKsiazke();
 			break;
 		case 5:
 			cout << "ZESKANUJ KSIAZKE." << endl;
-			if (ks.kara = true)
-				z.oplata();
+			if (ksiazka.kara = true)
+				zwrot.oplata();
 			else
 				cout << "ZWROT PRZEBIEGL POMYSLNIE." << endl;
 			break;
 		case 6:
-			raport.utworz_raport();
+			raport.utworzRaport();
 			break;
-		case 9: exit(0); break;
+		case 7: exit(0); break;
 
 		default:
 		{

@@ -16,7 +16,6 @@
 
 using namespace std;
 
-
 class Ksiazka;
 class Baza_ksiazek;
 class Logowanie;
@@ -27,20 +26,18 @@ class Uzytkownik;
 class Logowanie;
 class Rejestracja;
 
-//	OGOLNY PANEL STEROWANIA/MENU
+//OGOLNY PANEL STEROWANIA/MENU
 
-void panel_sterowania()
+void panelSterowania()
 {
-	
-
-	Baza_ksiazek b;
-	Rejestracja r;
-	Logowanie l;
-	Rezerwacja rez;
-	Wypozyczenie w;
-	Zwrot z;
+	Baza_ksiazek baza;
+	Rejestracja rejestracja;
+	Logowanie logowanie;
+	Rezerwacja rezerwacja;
+	Wypozyczenie wypozyczenie;
+	Zwrot zwrot;
 	System s;
-	Ksiazka ks, ks2;
+	Ksiazka ksiazka, ksiazka2;
 	Pracownik_biblioteki pracownik;
 
 
@@ -70,14 +67,14 @@ void panel_sterowania()
 	{
 		cout << "\n\t\t\t\tLOGOWANIE" << endl;
 
-		l.wprowadzenie_danych(k, h); //ustalone wartosci dla hasla i id karty
+		logowanie.wprowadzenieDanych(k, h); //ustalone wartosci dla hasla i id karty
 		break;
 	}
 	case 2:
 	{
 		system("cls");
 		cout << "\n\t\t\t\tREJESTRACJA" << endl;
-		r.uzupe³nienie_danych();
+		rejestracja.uzupelnienieDanych();
 
 		cout << endl << endl;
 
@@ -93,13 +90,13 @@ void panel_sterowania()
 	}
 	case 4:
 	{
-		b.wyswietl_szukane();
+		baza.wyswietlSzukane();
 		cout << endl << "Chcesz powrocic do panelu glownego?(y/n)" << endl;
 		cin >> y;
 		if (y == "y")
 		{
 			system("cls");
-			panel_sterowania();
+			panelSterowania();
 		}
 		else
 			exit(0);
@@ -112,7 +109,7 @@ void panel_sterowania()
 
 int main()
 {
-	panel_sterowania();
+	panelSterowania();
 
 	return 0;
 }

@@ -27,11 +27,10 @@ public:
 	int kod;
 	string haslo_nowe;
 
-	void sprawdzenie_has³a();
-	void utworzenie_konta(int, string);
-	void utworzenie_has³a();
-	void uzupe³nienie_danych();
-	void nadanie_id(string);
+	void utworzenieKonta(int, string);
+	void utworzenieHasla();
+	void uzupelnienieDanych();
+	void nadanieId(string);
 };
 
 #endif

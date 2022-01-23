@@ -8,7 +8,7 @@ using namespace std;
 #include "Baza_ksiazek.h"
 #include "Ksiazka.h"
 
-void Baza_ksiazek::dodaj_ksiazke()
+void Baza_ksiazek::dodajKsiazke()
 {
     system("cls");
     fstream file;
@@ -37,7 +37,7 @@ void Baza_ksiazek::dodaj_ksiazke()
 
 }
 
-void Baza_ksiazek::usun_ksiazke()
+void Baza_ksiazek::usunKsiazke()
 {
     system("cls");
     fstream file, file1;
@@ -123,7 +123,7 @@ void Baza_ksiazek::szukaj()
     }
 }
 
-void Baza_ksiazek::wyswietl_szukane()
+void Baza_ksiazek::wyswietlSzukane()
 {
     system("cls");
     fstream file;
@@ -132,7 +132,6 @@ void Baza_ksiazek::wyswietl_szukane()
 
     cout << "\n\n\t\t\t\tWyszukaj konkretnej pozycji:";
 
-    // Open the file in input mode
     file.open("ksiazki.txt", ios::in);
 
     if (!file)

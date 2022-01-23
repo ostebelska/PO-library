@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 class Baza_ksiazek;
 class System;
 class Raport;
@@ -17,6 +16,6 @@ public:
 	string _haslo;
 	
 	void logowanie();
-	void menu_pracownika();
+	void menuPracownika();
 
 };

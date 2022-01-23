@@ -20,9 +20,9 @@ public:
 
     Baza_ksiazek() {};
 
-    void dodaj_ksiazke();
-    void usun_ksiazke();
+    void dodajKsiazke();
+    void usunKsiazke();
     void szukaj();
-    void wyswietl_szukane();
+    void wyswietlSzukane();
 };
 #endif

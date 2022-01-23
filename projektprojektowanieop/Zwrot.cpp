@@ -18,7 +18,7 @@ void Zwrot::oplata()
 	}
 	else
 	{
-		cout << "Prosze uregulowac zaplate.";
+		cout << "Prosze uregulowac oplate.";
 		getchar();
 		getchar();
 	}

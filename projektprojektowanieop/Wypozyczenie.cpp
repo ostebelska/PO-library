@@ -4,14 +4,9 @@ using namespace std;
 
 #include "Wypozyczenie.h"
 
-void Wypozyczenie::zeskanuj_ksiazke()
+void Wypozyczenie::zeskanujKsiazke()
 {
 	cout << "Wypozyczenie przebieglo pomyslnie." << endl;
 	getchar(), getchar();
-}
-
-void Wypozyczenie::szukaj_ksiazki()
-{
-	throw "Not yet implemented";
 }
 

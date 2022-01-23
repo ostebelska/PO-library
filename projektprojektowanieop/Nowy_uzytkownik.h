@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 class Baza_ksiazek;
 class Rejestracja;
 class System;
@@ -16,7 +15,6 @@ class Nowy_uzytkownik;
 
 class Nowy_uzytkownik
 {
-
 public:
 		string imie;
 		string nazwisko;
@@ -26,10 +24,6 @@ public:
 		string id_karty;
 
 		Uzytkownik uzytkownik;
-		
-public: 
-	    void powrót_do_menu();
-	    void nadanie_id();
 };
 
 #endif

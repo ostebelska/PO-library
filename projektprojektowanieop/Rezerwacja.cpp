@@ -8,7 +8,7 @@ using namespace std;
 #include"Ksiazka.h"
 #include"Uzytkownik.h"
 
-void Rezerwacja::sprawdz_rezerwacje()
+void Rezerwacja::sprawdzRezerwacje()
 {
 	throw "Not yet implemented";
 }
@@ -22,7 +22,7 @@ void Rezerwacja::zarezerwuj()
 	cout << "Aby wyszukac ksiazke do zarezerwowania, wcisnij dowolny przycisk:" << endl;
 	getchar(), getchar();
 
-	b.wyswietl_szukane();
+	b.wyswietlSzukane();
 
 	cout << "Czy napewno chcesz zarezerwowac dana ksiazke?(y/n)" << endl;
 
@@ -39,6 +39,5 @@ void Rezerwacja::zarezerwuj()
 	else
 	{
 		cout << "POWROT DO MENU";
-
 	}
 }

@@ -17,7 +17,7 @@ class Uzytkownik
 {
 public:
 	int id_karty;
-	string haslo;			//haslo do logowania
+	string haslo;
 
 	//bool logowanie();
 	void wyszukaj();
