@@ -21,12 +21,6 @@
     <ClCompile Include="Baza_ksiazek.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Admin.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Bibliotekarz.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="Ksiazka.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
@@ -63,12 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Baza_ksiazek.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Admin.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Bibliotekarz.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Ksiazka.h">

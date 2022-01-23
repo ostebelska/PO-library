@@ -139,9 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Baza_ksiazek.cpp" />
-    <ClCompile Include="Bibliotekarz.cpp" />
     <ClCompile Include="Ksiazka.cpp" />
     <ClCompile Include="Logowanie.cpp" />
     <ClCompile Include="Nowy_uzytkownik.cpp" />
@@ -156,9 +154,7 @@
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Admin.h" />
     <ClInclude Include="Baza_ksiazek.h" />
-    <ClInclude Include="Bibliotekarz.h" />
     <ClInclude Include="Ksiazka.h" />
     <ClInclude Include="Logowanie.h" />
     <ClInclude Include="Nowy_uzytkownik.h" />

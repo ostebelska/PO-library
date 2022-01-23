@@ -18,6 +18,8 @@ void Pracownik_biblioteki::logowanie()
 	string adminUser;
 	string adminPassword;
 
+	system("cls");
+
 	cout << "\n ---------- PRACOWNIK BIBLIOTEKI -------";
 	cout << "\n\n Wpisz login: ";
 	cin >> adminUser;
@@ -33,11 +35,6 @@ void Pracownik_biblioteki::logowanie()
 		cout << "\n\n Blad.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
 		getchar(); getchar();
 	}
-}
-
-void Pracownik_biblioteki::raport()
-{
-	cout << "raport";
 }
 
 void Pracownik_biblioteki::menu_pracownika()
@@ -66,7 +63,7 @@ void Pracownik_biblioteki::menu_pracownika()
 		cout << "\n4. Wypozycz";
 		cout << "\n5. Zwroc";
 		cout << "\n6. Utworz raport";
-		cout << "\n9. Exit";
+		cout << "\n9. Zakoncz prace";
 		cout << "\n\n Wpisz swoj wybor : ";
 
 		cin >> choice;

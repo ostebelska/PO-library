@@ -127,9 +127,8 @@ void Baza_ksiazek::wyswietl_szukane()
 {
     system("cls");
     fstream file;
-    string w_name;
     int count = 0;
-    string b_id, b_name, a_name, b_idd;
+    string b_id, b_name, a_name, b_idd, w_name;
 
     cout << "\n\n\t\t\t\tWyszukaj konkretnej pozycji:";
 
@@ -157,16 +156,16 @@ void Baza_ksiazek::wyswietl_szukane()
                 cout << "\nAutor : " << a_name;
                 cout << "\nWydawnictwo : " << w_name;
                 cout << endl << endl;
+
                 count++;
                 break;
             }
             file >> b_id >> b_name;
             file >> a_name >> w_name;
         }
-        
         file.close();
 
         if (count == 0)
-            cout << "\n\nNIE ZNALEZIONO POZYCJI...";
+            cout << "\n\nNIE ZNALEZIONO POZYCJI..." << endl << endl;
     }
 }

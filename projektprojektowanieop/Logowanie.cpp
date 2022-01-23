@@ -12,12 +12,14 @@ using namespace std;
 void Logowanie::wprowadzenie_danych(int kod, string haslo)
 {
 	int nr;
+	char c;
 	string pass;
 
-	cout << "Wprowadz ID karty:";
+	cout <<endl<<"Wprowadz ID karty:";
 	cin >> nr;
 	cout << endl;
 	cout << "Wprowadz haslo:";
+
 	cin >> pass;
 
 	if (pass != haslo || nr != kod)
@@ -42,7 +44,7 @@ void Logowanie::logowanie()
 		cout << "\n\nZALOGOWANO POMYSLNIE." << endl << endl;
 		cout << "\n1. Szukaj ksiazki";
 		cout << "\n2. Zarezerwuj ksiazke";
-		cout << "\n9. Wyjdz";
+		cout << "\n9. Wyloguj sie";
 		cout << "\n\n Wpisz swoj wybor : ";
 
 		cin >> ch;
@@ -50,17 +52,17 @@ void Logowanie::logowanie()
 		{
 		case 1:
 			b.wyswietl_szukane();
+			system("pause");
 			break;
 		case 2:
 		{
 			rez.zarezerwuj();
-
 			break;
 		}
 		case 9:
 			exit(0);
-		default: cout << "\n\nZly wybor.  Nacisnij jakikolwiek przycisk, aby kontynuowac..";
-			getchar();
+		default: cout << "\n\nZly wybor." << endl;
+			system("pause");
 			break;
 		}
 		system("cls");
