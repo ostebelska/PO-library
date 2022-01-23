@@ -91,8 +91,15 @@ void panel_sterowania()
 		break;
 	}
 	case 4:
+	{
 		b.wyswietl_szukane();
+		cout << endl << "Chcesz powrocic do panelu glownego?(y/n)" << endl;
+		cin >> y;
+		if (y = 'y')
+			system("cls");
+			panel_sterowania();
 		break;
+	}
 	case 5:
 		exit(0);
 	}
